@@ -1,0 +1,8 @@
+F:\9jaHealth\9jaHealth\CONTRACT\bin\Debug\CONTRACT.dll
+F:\9jaHealth\9jaHealth\CONTRACT\bin\Debug\CONTRACT.pdb
+F:\9jaHealth\9jaHealth\CONTRACT\obj\Debug\CONTRACT.csproj.CoreCompileInputs.cache
+F:\9jaHealth\9jaHealth\CONTRACT\obj\Debug\CONTRACT.dll
+F:\9jaHealth\9jaHealth\CONTRACT\obj\Debug\CONTRACT.pdb
+F:\9jaHealth\9jaHealth\CONTRACT\obj\Debug\CONTRACT.csprojAssemblyReference.cache
+F:\9jaHealth\9jaHealth\CONTRACT\buildBin\CONTRACT.dll
+F:\9jaHealth\9jaHealth\CONTRACT\buildBin\CONTRACT.pdb
