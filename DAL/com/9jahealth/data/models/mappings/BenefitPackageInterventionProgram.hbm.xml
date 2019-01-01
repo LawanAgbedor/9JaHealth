@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="BenefitPackageInterventionProgram" table="BenefitPackageInterventionProgram">
+    <id name="BenefitPackageInterventionProgramId" column="id" >
+      <generator class="identity" />
+    </id>
+
+    <!--<property name="BenefitPackageHCSAId" column="benefitPackageHCSAId" />-->
+    <property name="ProgramName" column="programName" />
+    <property name="Comment" column="comment" type="StringClob" />
+    <property name="SessionId" column="sessionId" type="StringClob" />
+
+    <many-to-one class="BenefitPackageHCSA" name="BenefitPackageHCSAValue" column="BenefitPackageHCSAId" fetch="join" cascade="none" lazy="false" />
+
+  </class>
+</hibernate-mapping>

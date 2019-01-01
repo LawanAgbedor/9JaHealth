@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="EmploymentDetail" table="EmploymentDetail">
+    <id name="EmploymentDetailId" column="Id" >
+      <generator class="identity" />
+    </id>
+
+    <!--<property name="EnrolleeId" column="enroleeId" />-->
+    <property name="EmployerType" column="employerType" />
+    <property name="Ministry" column="ministry" />
+    <property name="RankGL" column="rankGL" />
+    <property name="RankStep" column="rankStep" />
+    <property name="ControlNumber" column="controlNumber" />
+    <property name="FileNumber" column="fileNumber" />
+    <property name="Station" column="station" />
+    <property name="StationAddress" column="stationAddress" type="StringClob" />
+    <property name="AppointmentDate" column="appointmentDate" />
+    <property name="RetirementDate" column="retirementDate" />
+    <property name="BVNNumber" column="bvnNumber" />
+    <property name="TSDate" column="tsDate" />
+    <property name="SessionId" column="sessionId" type="StringClob" />
+
+    <many-to-one class="Enrollee" name="EnrolleeValue" column="EnrolleeId" fetch="join" cascade="none" lazy="false" />
+
+  </class>
+</hibernate-mapping>

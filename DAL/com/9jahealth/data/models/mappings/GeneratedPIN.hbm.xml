@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="GeneratedPIN" table="GeneratedPIN">
+    <id name="GeneratedPINId" column="Id" >
+      <generator class="identity" />
+    </id>
+
+    <property name="RequestId" column="requestId" />
+    <property name="GeneratedBy" column="generatedBy" />
+    <property name="GeneratedDate" column="generatedDate" />
+    <property name="SessionId" column="sessionId" type="StringClob" />
+
+  </class>
+</hibernate-mapping>

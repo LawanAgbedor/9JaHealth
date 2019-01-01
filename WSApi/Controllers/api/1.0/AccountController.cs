@@ -1,11 +1,13 @@
-﻿using System;
+﻿using BIZ.managers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using UTIL.exceptions;
 
-namespace AppWebApi.Controllers.api._1._0
+namespace WSApi.Controllers.api._1._0
 {
     [RoutePrefix("api/1.0/account")]
     public class AccountController : ApiController
@@ -17,9 +19,20 @@ namespace AppWebApi.Controllers.api._1._0
         }
 
         [Route("{id}")]
-        public IHttpActionResult Get(int id)
+        public IHttpActionResult Get(Guid? id)
         {
-            return Ok(new { id = 1, name = "lawan" });
+            if (!id.HasValue)
+                throw new AppWebException(AppWebExceptionType.InvalidParameter, "Invalid NULL value for 'id'.", null);
+
+            var data = UserManager.GetByID(id.Value);
+            return Ok(data);
+        }
+
+        [Route("username/{username}")]
+        public IHttpActionResult GetByUsername(string username)
+        {
+            var data = UserManager.GetByUserName(username);
+            return Ok(data);
         }
 
         [Route("ama/{id1}/alla/{id2}")]

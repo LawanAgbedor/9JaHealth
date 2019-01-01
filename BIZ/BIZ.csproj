@@ -32,7 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="managers\LoginManager.cs" />
+    <Compile Include="managers\BenefitPackageManager.cs" />
+    <Compile Include="managers\RoleManager.cs" />
+    <Compile Include="managers\SecurityManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="managers\UserManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{58656050-2B1F-4B71-8CA6-4D50BE9388F6}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UTIL\UTIL.csproj">
+      <Project>{5DBE7861-8A59-4C7E-9FF3-28D6A264DC56}</Project>
+      <Name>UTIL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

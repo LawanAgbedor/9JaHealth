@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="User" table="AspNetUsers">
+    <id name="UserId" column="Id" >
+      <generator class="guid" />
+    </id>
+
+    <property name="UserProfileInfoUserSource" column="UserProfileInfo_UserSource" />
+    <property name="UserEmail" column="Email" />
+    <property name="UserEmailConfirmed" column="EmailConfirmed" />
+    <property name="PasswordHash" column="PasswordHash" type="StringClob" />
+    <property name="SecurityStamp" type="StringClob" />
+    <property name="PhoneNumber" type="StringClob" />
+    <property name="PhoneNumberConfirmed" />
+    <property name="TwoFactorEnabled" />
+    <property name="LockoutEndDateUtc" />
+    <property name="LockoutEnabled" />
+    <property name="AccessFailedCount" />
+    <property name="UserName" />
+
+    <bag name="UserRoles" cascade="none" lazy="false">
+      <key column="userId" property-ref="UserName" update="false"/>
+      <one-to-many class="UserRole" />
+    </bag>
+
+  </class>
+</hibernate-mapping>

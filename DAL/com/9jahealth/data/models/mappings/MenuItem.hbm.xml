@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="MenuItem" table="MenuItem">
+    <id name="MenuItemId" column="menuItemId" >
+      <generator class="identity" />
+    </id>
+
+    <!--<property name="MenuId" column="menuId" />-->
+    <property name="MenuItemName" column="menuItemName" />
+    <property name="MenuItemUrl" column="url" />
+
+    <many-to-one class="Menu" name="MenuValue" column="MenuId" fetch="join" cascade="none" lazy="false" />
+
+  </class>
+</hibernate-mapping>

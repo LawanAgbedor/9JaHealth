@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="Ministry" table="Ministry">
+    <id name="MinistryId" column="Id" >
+      <generator class="identity" />
+    </id>
+
+    <property name="MinistryName" column="ministryName" />
+    <property name="SessionId" column="sessionId" />
+
+  </class>
+</hibernate-mapping>

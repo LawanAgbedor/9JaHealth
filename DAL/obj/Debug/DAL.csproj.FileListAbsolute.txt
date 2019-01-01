@@ -1,9 +1,5 @@
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\DAL.dll
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\DAL.pdb
-F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.dll
-F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.pdb
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\Antlr3.Runtime.dll
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\Iesi.Collections.dll
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\NHibernate.dll
@@ -18,7 +14,6 @@ F:\9jaHealth\9jaHealth\DAL\bin\Debug\NHibernate.xml
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\Remotion.Linq.xml
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\Remotion.Linq.EagerFetching.xml
 F:\9jaHealth\9jaHealth\DAL\bin\Debug\log4net.xml
-F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.csproj.CopyComplete
 F:\9jaHealth\9jaHealth\DAL\buildBin\DAL.dll
 F:\9jaHealth\9jaHealth\DAL\buildBin\DAL.pdb
 F:\9jaHealth\9jaHealth\DAL\buildBin\Antlr3.Runtime.dll
@@ -35,3 +30,8 @@ F:\9jaHealth\9jaHealth\DAL\buildBin\NHibernate.xml
 F:\9jaHealth\9jaHealth\DAL\buildBin\Remotion.Linq.xml
 F:\9jaHealth\9jaHealth\DAL\buildBin\Remotion.Linq.EagerFetching.xml
 F:\9jaHealth\9jaHealth\DAL\buildBin\log4net.xml
+F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.csproj.CopyComplete
+F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.dll
+F:\9jaHealth\9jaHealth\DAL\obj\Debug\DAL.pdb

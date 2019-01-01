@@ -8,8 +8,18 @@ using System.Threading.Tasks;
 
 namespace UTIL
 {
+
     public class ConfigHelper
     {
+        public enum RunEnvironment
+        {
+            local,
+            development,
+            staging,
+            production
+        }
+
+
         private static NameValueCollection appSettings = ConfigurationManager.AppSettings;
         private static ConnectionStringSettingsCollection connSettings = ConfigurationManager.ConnectionStrings;
 
@@ -43,6 +53,21 @@ namespace UTIL
             var value = (object)appSettings.Get(key);
 
             return (T)value;
+        }
+
+        public static bool IsLocal()
+        {
+            return IsEnv(RunEnvironment.local);
+        }
+
+        public static bool IsProduction()
+        {
+            return IsEnv(RunEnvironment.production);
+        }
+
+        private static bool IsEnv(RunEnvironment env)
+        {
+            return GetValue("ENVIRONMENT").IndexOf(env.ToString(), StringComparison.InvariantCultureIgnoreCase) > -1;
         }
     }
 }

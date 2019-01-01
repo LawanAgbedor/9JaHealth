@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="Enrollee" table="Enrollee">
+    <id name="EnrolleeId" column="Id" >
+      <generator class="identity" />
+    </id>
+
+    <property name="EnrolleeNumber" column="enrolleeNumber" />
+    <property name="FirstName" column="firstName" />
+    <property name="Surname" column="surname" />
+    <property name="OtherNames" column="otherNames" />
+    <property name="DateOfBirth" column="dateOfBirth" />
+    <property name="Age" column="age" />
+    <property name="Gender" column="gender" />
+    <property name="BloodGroup" column="bloodGroup" />
+    <property name="MaritalStatus" column="maritalStatus" />
+    <property name="ResidentAddress" column="residentAddress" />
+    <property name="LGAId" column="lgaId" />
+    <property name="TSDate" column="tsDate" />
+    <property name="EnrolleeType" column="type" />
+    <property name="IsActive" column="isActive" />
+    <property name="Email" column="email" />
+    <property name="GeneratedPinId" column="generatedPinID" />
+    <property name="PhoneNumber" column="phoneNumber" />
+    <property name="SessionId" column="sessionId" type="StringClob" />
+
+  </class>
+</hibernate-mapping>

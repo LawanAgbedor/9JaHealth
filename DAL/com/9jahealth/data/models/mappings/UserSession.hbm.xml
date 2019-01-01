@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DAL"
+                   namespace="DAL.com._9jahealth.data.models">
+
+  <class name="UserSession" table="UserSessions">
+    <id name="UserSessionId" column="ID" >
+      <generator class="guid" />
+    </id>
+
+    <property name="UserId" column="UserID" />
+    <property name="LastActivity" />
+    <property name="KeepAlive" />
+    <property name="UserAgent" />
+    <property name="BrowserName" />
+    <property name="BrowserVersion" />
+    <property name="OS_Name" />
+    <property name="OS_Version" />
+    <property name="DateCreated" />
+
+  </class>
+</hibernate-mapping>

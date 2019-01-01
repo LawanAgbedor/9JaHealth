@@ -65,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{58656050-2B1F-4B71-8CA6-4D50BE9388F6}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WSApi\WSApi.csproj">
       <Project>{369A005E-A931-44CF-9CB8-5659A5DEB62A}</Project>
       <Name>WSApi</Name>

@@ -59,15 +59,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="com\9jahealth\data\bases\BaseCacheable.cs" />
-    <Compile Include="com\9jahealth\data\bases\BaseRecord.cs" />
+    <Compile Include="com\9jahealth\data\dao\AuthenticationDao.cs" />
+    <Compile Include="com\9jahealth\data\dao\BenefitPackageCategoryDao.cs" />
+    <Compile Include="com\9jahealth\data\dao\BenefitPackageHCSADao.cs" />
+    <Compile Include="com\9jahealth\data\dao\BenefitPackageInterventionProgramDao.cs" />
+    <Compile Include="com\9jahealth\data\dao\BenefitPackageProgramServiceDao.cs" />
+    <Compile Include="com\9jahealth\data\dao\UserDao.cs" />
+    <Compile Include="com\9jahealth\data\models\bases\BaseCacheable.cs" />
+    <Compile Include="com\9jahealth\data\models\bases\BaseRecord.cs" />
     <Compile Include="com\9jahealth\data\bases\interfaces\IRecord.cs" />
     <Compile Include="com\9jahealth\data\dao\bases\BaseDao.cs" />
     <Compile Include="com\9jahealth\data\helpers\ConnectionStringHelper.cs" />
     <Compile Include="com\9jahealth\data\helpers\NHibernateHelper.cs" />
+    <Compile Include="com\9jahealth\data\models\bases\BaseSessionID.cs" />
+    <Compile Include="com\9jahealth\data\models\BenefitPackageCategory.cs" />
+    <Compile Include="com\9jahealth\data\models\BenefitPackageHCSA.cs" />
+    <Compile Include="com\9jahealth\data\models\BenefitPackageInterventionProgram.cs" />
+    <Compile Include="com\9jahealth\data\models\BenefitPackageProgramService.cs" />
+    <Compile Include="com\9jahealth\data\models\Dependent.cs" />
+    <Compile Include="com\9jahealth\data\models\DependentMedicalHistory.cs" />
+    <Compile Include="com\9jahealth\data\models\EmploymentDetail.cs" />
+    <Compile Include="com\9jahealth\data\models\Enrollee.cs" />
+    <Compile Include="com\9jahealth\data\models\EnrolleeMedicalHistory.cs" />
+    <Compile Include="com\9jahealth\data\models\GeneratedPIN.cs" />
+    <Compile Include="com\9jahealth\data\models\GeneratedPINDetail.cs" />
+    <Compile Include="com\9jahealth\data\models\HealthZone.cs" />
+    <Compile Include="com\9jahealth\data\models\interfaces\ISessionID.cs" />
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\Dependent.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="com\9jahealth\data\models\LGAOfOrigin.cs" />
+    <Compile Include="com\9jahealth\data\models\LocalGovt.cs" />
+    <Compile Include="com\9jahealth\data\models\Menu.cs" />
+    <Compile Include="com\9jahealth\data\models\MenuItem.cs" />
+    <Compile Include="com\9jahealth\data\models\Ministry.cs" />
+    <Compile Include="com\9jahealth\data\models\Role.cs" />
+    <Compile Include="com\9jahealth\data\models\User.cs" />
+    <Compile Include="com\9jahealth\data\models\UserRole.cs" />
+    <Compile Include="com\9jahealth\data\models\UserSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\DependentMedicalHistory.hbm.xml" />
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\EnrolleeMedicalHistory.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\EmploymentDetail.hbm.xml" />
     <None Include="com\9jahealth\data\models\mappings\nhibernate-configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -77,13 +112,67 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="com\9jahealth\data\models\bases\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\UTIL\UTIL.csproj">
       <Project>{5DBE7861-8A59-4C7E-9FF3-28D6A264DC56}</Project>
       <Name>UTIL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\Role.hbm.xml" />
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\User.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\UserRole.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\BenefitPackageCategory.hbm.xml" />
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\BenefitPackageInterventionProgram.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\BenefitPackageHCSA.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\BenefitPackageProgramService.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\Enrollee.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\GeneratedPIN.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\GeneratedPINDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\HealthZone.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\LGAOfOrigin.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\LocalGovt.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\Menu.hbm.xml" />
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\MenuItem.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\Ministry.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="com\9jahealth\data\models\mappings\UserSession.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

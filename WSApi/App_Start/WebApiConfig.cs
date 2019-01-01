@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace AppWebApi
+namespace WSApi
 {
     public static class WebApiConfig
     {

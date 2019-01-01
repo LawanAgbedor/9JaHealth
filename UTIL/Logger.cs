@@ -79,31 +79,31 @@ namespace UTIL
             LogicalThreadContext.Properties[LOG_DATA] = _data;
         }
 
-        public void LogDebug(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
+        public void Debug(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
         {
             logData = UpdateLogData(logData, memberName, sourceFilePath, callerLineNumber);
             BuildLoggerData(logData);
             _Debug(message, exception);
         }
-        public void LogError(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
+        public void Error(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
         {
             logData = UpdateLogData(logData, memberName, sourceFilePath, callerLineNumber);
             BuildLoggerData(logData);
             _Error(message, exception);
         }
-        public void LogFatal(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
+        public void Fatal(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
         {
             logData = UpdateLogData(logData, memberName, sourceFilePath, callerLineNumber);
             BuildLoggerData(logData);
             _Fatal(message, exception);
         }
-        public void LogInfo(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
+        public void Info(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
         {
             logData = UpdateLogData(logData, memberName, sourceFilePath, callerLineNumber);
             BuildLoggerData(logData);
             _Info(message, exception);
         }
-        public void LogWarning(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
+        public void Warning(object message, LoggerData logData = null, Exception exception = null, [CallerMemberName] string memberName = "", [CallerFilePath] string sourceFilePath = "", [CallerLineNumber] int callerLineNumber = -1)
         {
             logData = UpdateLogData(logData, memberName, sourceFilePath, callerLineNumber);
             BuildLoggerData(logData);

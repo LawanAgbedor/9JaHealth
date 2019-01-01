@@ -40,7 +40,7 @@ namespace DAL.com._9jahealth.data.helpers
             {
                 var activeConn = ConfigHelper.GetValue(ACTIVE_CONNECTION_STRING);
 
-                if (string.IsNullOrWhiteSpace(activeConn))
+                if (!string.IsNullOrWhiteSpace(activeConn))
                 {
                     return activeConn.Trim();
                 }
